@@ -90,4 +90,17 @@ adott tantárgyra és osztályra két bejegyzést is tartalmaz a tantárgyfelosz
 osztály azonosítóját, valamint egy tantárgy nevét, és írassa ki a képernyőre, hogy az adott
 osztály a megadott tantárgyat csoportbontásban vagy osztályszinten tanulja-e!
 (Feltételezheti, hogy a megadott osztály tanulja a megadott tantárgyat.) 
+6. feladat
+Osztály= 10.b
+Tantárgy= kemia
+Csoportbontásban tanulják.
 """
+
+print("6.feladat")
+be_osztaly=input("Osztály: ") or "10.b"
+be_tantargy=input("Tantárgy: ") or "kemia"
+print(f"CSoportbontásban tanulják")
+
+index=0
+while index<len(beosztas) and not (beosztasok[index]['osztaly']==be_osztaly and beosztasok[index]['tantargy']==be_tantargy):
+    index+=1
