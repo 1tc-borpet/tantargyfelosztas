@@ -65,3 +65,29 @@ def tanar_oraszamanak_osszegzese(bok,be_nev):
     return ossszeg
 
 print(f"A tanár heti óraszáma: {tanar_oraszamanak_osszegzese(beosztasok,be_tanarnev)}")
+
+
+"""
+5. feladat
+Készítse el az of.txt fájlt, amely az osztályfőnökök nevét tartalmazza osztályonként
+az alábbi formában (az osztályok megjelenítésének sorrendje a mintától eltérhet):
+
+9.a - Albatrosz Aladin
+9.b - Hangya Hanna
+9.c - Zerge Zenina
+KIVÁLOGATÁS
+…
+"""
+with open("of.txt","w",encoding="UTF-8") as fm2:
+    for beosztas in beosztasok:
+        if beosztas["tantargy"]=="osztalyfonoki":
+            print(f"{beosztas['osztaly']} - {beosztas['tanar']}", file=fm2)
+
+"""
+6. feladat
+Egyes osztályokban bizonyos tantárgyakat a tanulók csoportbontásban tanulnak: ekkor az
+adott tantárgyra és osztályra két bejegyzést is tartalmaz a tantárgyfelosztás. Kérje be egy
+osztály azonosítóját, valamint egy tantárgy nevét, és írassa ki a képernyőre, hogy az adott
+osztály a megadott tantárgyat csoportbontásban vagy osztályszinten tanulja-e!
+(Feltételezheti, hogy a megadott osztály tanulja a megadott tantárgyat.) 
+"""
