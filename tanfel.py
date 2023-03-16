@@ -95,8 +95,6 @@ Osztály= 10.b
 Tantárgy= kemia
 Csoportbontásban tanulják.
 """
-
-print("6.feladat")
 be_osztaly=input("Osztály: ") or "10.b"
 be_tantargy=input("Tantárgy: ") or "kemia"
 
@@ -123,3 +121,9 @@ ki ezt az adatot a képernyőre!
 Az iskolában 49 tanár tanít.
 """
 
+tanarok=[]
+for beosztas in beosztasok:
+    if beosztas["tanar"] not in tanarok:
+        tanarok.append(beosztas["tanar"])
+    
+print(f"Az iskolában {len(tanarok)} tanár tanit")
