@@ -99,8 +99,27 @@ Csoportbontásban tanulják.
 print("6.feladat")
 be_osztaly=input("Osztály: ") or "10.b"
 be_tantargy=input("Tantárgy: ") or "kemia"
-print(f"CSoportbontásban tanulják")
 
-index=0
-while index<len(beosztas) and not (beosztasok[index]['osztaly']==be_osztaly and beosztasok[index]['tantargy']==be_tantargy):
-    index+=1
+def csoportban_tanuljak(beo,be_o,be_t):
+    i=0
+    while i<len(beo) and not(beo[i]['osztaly']==be_o):
+        i+=1
+    return not(i<len(beo))
+
+if csoportban_tanuljak(beosztasok, be_osztaly, be_tantargy):
+    print("Csoportbontasban tanuljak")
+else:
+    print("Osztaly szinten")
+# print(f"Csoportbontásban tanulják")
+# index=0
+# while index<len(beosztas) and not (beosztasok[index]['osztaly']==be_osztaly and beosztasok[index]['tantargy']==be_tantargy):
+#     index+=1
+
+"""
+7. feladat
+A fenntartó számára az is fontos információ, hogy hány tanár dolgozik az iskolában. Írassa
+ki ezt az adatot a képernyőre!
+7. feladat
+Az iskolában 49 tanár tanít.
+"""
+
